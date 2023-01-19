@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WorldReminder</title>
+        <link rel="stylesheet" href="/css/homepage.css">
+    </head>
+    <body>
+    <% if(title == "online"){%>
+            <p class="test">REQUEST CONFIRMED</p>
+            <script>let date = new Date(); let luna = ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"]; setInterval( () => { date = new Date; document.body.innerHTML = `<h1 class='test'>Ziua: ${date.getDate()}<br>Luna: ${date.getMonth() + 1 } (${luna[date.getMonth()]})<br>Anul: ${date.getFullYear()}<br>Ora: ${date.getHours()}<br>Minutul: ${date.getMinutes()}<br>Secunda: ${date.getSeconds()}<br>Milisecunda: ${date.getMilliseconds()}</h1>`}, 10)</script>
+    <%} else if(title == "repeta"){ console.log(title)%>
+            <script>setInterval( async () => { document.body.innerHTML += "<h1>test</h1>" }, 1000)</script>
+    <%}%>
+</html>
